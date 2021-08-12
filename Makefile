@@ -7,9 +7,10 @@ UVCFLAG=-I/storage/irc/GetThermal/source/libuvc/build/include \
 
 CURPATH=`pwd`
 
-INSTALLPATH=/usr/local/lib/
+INSTALLPATH=/usr/local
 
 shared:
+	mkdir Obj lib
 	$(CC) $(FLAGS) -o ./Obj/LEPTON_AGC.o ./Src/LEPTON_AGC.c $(INC)
 	$(CC) $(FLAGS) -o ./Obj/LEPTON_OEM.o ./Src/LEPTON_OEM.c $(INC)
 	$(CC) $(FLAGS) -o ./Obj/LEPTON_RAD.o ./Src/LEPTON_RAD.c $(INC)
